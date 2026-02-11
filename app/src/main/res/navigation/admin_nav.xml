@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav"
+    app:startDestination="@id/adminHomeFragment">
+
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.BookOperation.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_categoryAdminFragment"
+            app:destination="@id/categoryAdminFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminProfileFragment"
+            app:destination="@id/adminProfileFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_issueBookRequestFragment"
+            app:destination="@id/issueBookRequestFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.BookOperation.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBookFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.BookOperation.UpdateBookFragment"
+        android:label="fragment_update_book"
+        tools:layout="@layout/fragment_update_book" />
+    <fragment
+        android:id="@+id/categoryAdminFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.BookOperation.CategoryAdminFragment"
+        android:label="fragment_category_admin"
+        tools:layout="@layout/fragment_category_admin" >
+        <action
+            android:id="@+id/action_categoryAdminFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.BookOperation.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_updateBookFragment"
+            app:destination="@id/updateBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Profile.AdminProfileFragment"
+        android:label="fragment_admin_profile"
+        tools:layout="@layout/fragment_admin_profile" >
+        <action
+            android:id="@+id/action_adminProfileFragment_to_adminEditProfileFragment"
+            app:destination="@id/adminEditProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminEditProfileFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Profile.AdminEditProfileFragment"
+        android:label="fragment_admin_edit_profile"
+        tools:layout="@layout/fragment_admin_edit_profile" >
+        <action
+            android:id="@+id/action_adminEditProfileFragment_to_adminProfileFragment"
+            app:destination="@id/adminProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Others.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_adminProfileFragment"
+            app:destination="@id/adminProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/issueBookRequestFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Others.IssueBookRequestFragment"
+        android:label="fragment_issue_book_request"
+        tools:layout="@layout/fragment_issue_book_request" >
+        <action
+            android:id="@+id/action_issueBookRequestFragment_to_issuedBookFragment"
+            app:destination="@id/issuedBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/issuedBookFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Others.IssuedBookFragment"
+        android:label="fragment_issued_book"
+        tools:layout="@layout/fragment_issued_book" >
+        <action
+            android:id="@+id/action_issuedBookFragment_to_issueBookRequestFragment"
+            app:destination="@id/issueBookRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.jenil.librarymanagement.fragments.Admin.View.Others.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" />
+
+</navigation>

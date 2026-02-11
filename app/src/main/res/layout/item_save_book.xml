@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_6sdp"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_viewpager">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idCardViewSave"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSaveBookImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_place" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/lobster"
+            android:text="Girls Who Burn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@+id/idCardViewSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveBookAuthorNameTitle"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/red_rose"
+            android:text="Author      : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@+id/idCardViewSave"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveBookName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveBookAuthorName"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/red_rose"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="NA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvSaveBookAuthorNameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveBookName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveBookCategoryTitle"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/red_rose"
+            android:text="Category : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@+id/idCardViewSave"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveBookAuthorNameTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveBookCategory"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:singleLine="true"
+            android:text="NA"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@+id/tvSaveBookCategoryTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveBookAuthorNameTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

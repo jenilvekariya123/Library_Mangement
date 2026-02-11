@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314784136459",
+    "project_id": "expense-tacker-d59ce",
+    "storage_bucket": "expense-tacker-d59ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314784136459:android:8a9a1381549947bc85760e",
+        "android_client_info": {
+          "package_name": "com.jenil.librarymanagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABtFMEoTfKULofA5BH7zFcH-fnbEVDctQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".fragments.Admin.View.Profile.AdminEditProfileFragment">
+
+    <include android:id="@+id/idAppBar"
+        layout="@layout/appbar_layout"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCardViewProfile"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/black"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idAppBar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChangeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Your Image"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/red_rose"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/idCardViewProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/idView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/teal"
+        android:alpha="0.5"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeImg"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idView">
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:text="Library Name : "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_13sdp"/>
+        
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLibraryName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/bg_card_admin"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_12sdp"/>
+        
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Liner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Liner1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:text="Address : "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/bg_card_admin"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_12sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Liner3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Liner2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:text="Phone No : "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etContactNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/bg_card_admin"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_12sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Liner4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Liner3">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:text="Email ID :"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/bg_card_admin"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_12sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_40sdp"
+        android:background="@drawable/bg_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Liner4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBtnName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:elevation="@dimen/_6sdp"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/idProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

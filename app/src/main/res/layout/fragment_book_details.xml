@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".fragments.User.View.Books.BookDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout android:id="@+id/idAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_appbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="34dp"
+                    android:src="@drawable/ic_backspace"
+                    android:tint="@color/white"
+                    android:tooltipText="Menu" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:fontFamily="@font/dangrek"
+                    android:gravity="top|center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCardView2"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_minus60sdp"
+                app:layout_constraintTop_toBottomOf="@+id/idAppBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardUseCompatPadding="true"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_6sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBookImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_place"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFavBorder"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_love"
+                android:visibility="visible"
+                android:tint="@color/teal"
+                android:tooltipText="Save Book"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/idViewBook"/>
+
+            <View
+                android:id="@+id/idViewBook"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/teal"
+                android:alpha="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/idCardView2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_details"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:textColor="@color/teal"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/red_rose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idViewBook"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <View
+                android:id="@+id/idViewBook1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/teal"
+                android:alpha="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleBook" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/idViewBook1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author_name"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/teal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookAuthorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/release_date"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/teal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookReleaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/teal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/teal"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBookDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:maxLines="4"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSeeMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read More..."
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/red_rose"/>
+
+                <RelativeLayout
+                    android:id="@+id/btnIssueBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_60sdp"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:background="@drawable/bg_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/idCardView3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBtnName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:elevation="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="@string/issue_book"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/idProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
