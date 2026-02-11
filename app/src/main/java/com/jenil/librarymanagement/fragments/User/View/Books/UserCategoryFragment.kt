@@ -68,7 +68,7 @@ class UserCategoryFragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 binding.idProgressBar.visibility = View.GONE
                 binding.idRecyclerCategoryList.visibility = View.VISIBLE
-                TODO("Not yet implemented")
+
             }
 
         })

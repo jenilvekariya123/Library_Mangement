@@ -85,7 +85,7 @@ class UserHomeFragment : Fragment() {
                     binding.tvUserName.text = userName
                     binding.headerTitle.tvLibraryId.text = getString(R.string.student_id, studId)
                 }
-                override fun onCancelled(error: DatabaseError) { TODO("Not yet implemented") }
+                override fun onCancelled(error: DatabaseError) {  }
             })
         }
     }

@@ -151,7 +151,7 @@ class AdminHomeFragment : Fragment() {
                             binding.tvLibraryName.text = libraryName
                         }
                     }
-                    override fun onCancelled(error: DatabaseError) { TODO("Not yet implemented") }
+                    override fun onCancelled(error: DatabaseError) {  }
                 })
             }
 
@@ -189,7 +189,7 @@ class AdminHomeFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
