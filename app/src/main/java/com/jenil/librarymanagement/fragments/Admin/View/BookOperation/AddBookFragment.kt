@@ -154,7 +154,7 @@ class AddBookFragment : Fragment() {
                         Toast.makeText(requireContext(), "Failed to update book ID for current category", Toast.LENGTH_SHORT).show()
                     } else {
                         val bookId = currentData?.getValue(Int::class.java) ?: 1
-                        uploadImage(bookId.toString(), category[position], category)
+                        uploadImage(bookId.toString(), category)
 
 
                         Toast.makeText(requireContext(), "Current Category BookCounter: $bookId", Toast.LENGTH_LONG).show()
@@ -186,7 +186,7 @@ class AddBookFragment : Fragment() {
 
 
 
-    private fun uploadImage(key: String, categoryName: String, category: List<String>) {
+    private fun uploadImage(key: String, category: List<String>) {
         filePath?.let { uri ->
             DialogUtils.loader(requireContext(),"Uploading...")
 
@@ -214,7 +214,7 @@ class AddBookFragment : Fragment() {
 
     private fun saveBookData(imageUri: String, bookId: String, category: List<String>) {
         val selectedPosition = binding.idSpinnerCategory.selectedItemPosition
-        val selectCategory = category[selectedPosition].lowercase(Locale.ROOT)
+        category[selectedPosition].lowercase(Locale.ROOT)
 
         val bookRef = databaseReference.child("Books").child(selectedPosition.toString()).child("BookList").child(bookId)
 
