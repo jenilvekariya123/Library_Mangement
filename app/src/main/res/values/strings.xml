@@ -59,4 +59,5 @@
     <string name="delete">Delete</string>
     <string name="users_details">Users Details</string>
     <string name="read_more_">Read More...</string>
+    <string name="book_name">Book Name</string>
 </resources>

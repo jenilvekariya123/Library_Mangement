@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.jenil.librarymanagement"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.jenil.librarymanagement"
@@ -32,7 +32,6 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
@@ -45,6 +44,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -80,6 +80,10 @@ dependencies {
 
     // Glide for image loading
     implementation (libs.glide)
+
+//    val lottieVersion = "3.4.0"
+    implementation (libs.lottie)
+
 
 
 }

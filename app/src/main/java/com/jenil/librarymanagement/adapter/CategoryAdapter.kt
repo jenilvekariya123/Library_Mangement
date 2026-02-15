@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jenil.librarymanagement.Data.CategoryModel
-import com.jenil.librarymanagement.R
 import com.jenil.librarymanagement.databinding.ItemCategoryBinding
 
 class CategoryAdapter(

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/_2sdp"
@@ -30,7 +29,7 @@
         android:id="@+id/tvBookName"
         android:layout_width="@dimen/_90sdp"
         android:layout_height="wrap_content"
-        android:text="Book Name"
+        android:text="@string/book_name"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="@dimen/_13sdp"

@@ -7,7 +7,4 @@ data class BookInfo(
     var desc: String? = null,
     var releaseDate: String? = null,
     var url: String? = null
-) {
-
-    constructor() : this(null, null, null, null, null, null)
-}
+)
