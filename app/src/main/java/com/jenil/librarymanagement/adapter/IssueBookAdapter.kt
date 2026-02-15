@@ -38,11 +38,11 @@ class IssueBookAdapter (
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): IssueBookAdapter.IssueBookViewHolder {
+    ): IssueBookViewHolder {
         return IssueBookViewHolder(ItemIssueBookBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
-    override fun onBindViewHolder(holder: IssueBookAdapter.IssueBookViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: IssueBookViewHolder, position: Int) {
         holder.bind(issueBookList[position])
     }
 
