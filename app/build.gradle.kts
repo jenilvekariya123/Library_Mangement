@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
-
 }
 
 android {
@@ -13,7 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.jenil.librarymanagement"
-        minSdk = 28
+        minSdk = 30
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -28,62 +28,65 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Note: Using debug keys for release is generally for testing only
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    // UPDATED: Modern Android builds prefer Java 11 or 17
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_1_8)
+            jvmTarget.set(JvmTarget.JVM_17)
         }
     }
 
     buildFeatures {
         viewBinding = true
     }
-    buildToolsVersion = "34.0.0"
+    buildToolsVersion = "36.0.0"
 }
 
 dependencies {
-
+    // Core & UI
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // Firebase
+    implementation(platform(libs.firebase.bom)) // BOM manages versions automatically
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.storage.ktx)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(platform(libs.firebase.bom))
 
-// Lifecycle
-    implementation (libs.androidx.lifecycle.extensions)
-    implementation (libs.androidx.lifecycle.common.java8)
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    // Lifecycle
+    implementation(libs.androidx.lifecycle.extensions)
+    implementation(libs.androidx.lifecycle.common.java8)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // Navigation
-    implementation (libs.androidx.navigation.fragment.ktx)
-    implementation (libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
-    // SDP and SSP for scalable dimensions
-    implementation (libs.sdp.android)
-    implementation (libs.ssp.android)
+    // Dimensions (SDP/SSP)
+    implementation(libs.sdp.android)
+    implementation(libs.ssp.android)
 
-    // GIF) support(
-     implementation (libs.android.gif.drawable)
+    // GIF support
+    implementation(libs.android.gif.drawable)
 
-    // Glide for image loading
-    implementation (libs.glide)
-
-//    val lottieVersion = "3.4.0"
-    implementation (libs.lottie)
-
-
-
+    // Images & Animation
+    implementation(libs.glide)
+    implementation(libs.lottie)
 }
