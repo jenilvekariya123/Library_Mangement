@@ -55,15 +55,25 @@ Build and run the project on your device or emulator
 
 Project Structure
 app/
+
 ├── src/
+
 │   └── main/
+
 │       ├── java/         # Kotlin source files (Activities, Adapters, Models)
+
 │       ├── res/
+
 │       │   ├── layout/   # XML UI layouts
+
 │       │   ├── drawable/ # Icons and images
+
 │       │   └── values/   # Colours, strings, themes
+
 │       └── AndroidManifest.xml
+
 build.gradle.kts           # App-level Gradle config
+
 
 What I Learned
 
