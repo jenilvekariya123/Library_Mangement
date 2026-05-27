@@ -4,11 +4,17 @@ An Android application for managing library book inventory, built with Kotlin an
 Features
 
 Add Books — Add new books to the library with title, author, and category details
+
 Search & Browse — Search the catalogue by title or author name
+
 Borrow & Return Tracking — Mark books as borrowed or returned and track availability in real time
+
 Firebase Integration — Real-time database synchronisation ensures data is always up to date
+
 User Authentication — Secure login and registration via Firebase Authentication
+
 Delete & Update — Edit or remove book records from the catalogue
+
 
 
 Tech Stack
